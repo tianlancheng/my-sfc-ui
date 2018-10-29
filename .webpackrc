@@ -1,0 +1,52 @@
+{
+  "entry": "src/app.js",
+  "extraBabelPlugins": [
+    ["import", {
+      "libraryName": "antd",
+      "libraryDirectory": "es",
+      "style": true
+    }]
+  ],
+  "env": {
+    "development": {
+      "extraBabelPlugins": ["dva-hmr"]
+    }
+  },
+  "externals": {
+    "@antv/data-set": "DataSet"
+  },
+  "proxy": {
+    "/api": {
+      "target": "http://192.168.43.128:5000/",
+      "changeOrigin": true
+    },
+    "/assets": {
+      "target": "http://192.168.43.128:5000/",
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/assets": ""
+      }
+    },
+    "/kubernetes": {
+      "target": "http://192.168.43.128:8080/",
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/kubernetes": ""
+      }
+    },
+    "/socket": {
+      "target": "http://192.168.43.128:5000/",
+      "ws": true,
+      "secure": false,
+      "logLevel": "debug"
+    }
+  },
+  "ignoreMomentLocale": true,
+  "theme": "./src/components/theme.js",
+  "html": {
+    "template": "./src/index.ejs"
+  },
+  "disableDynamicImport": true,
+  "publicPath": "/",
+  "hash": true
+}
