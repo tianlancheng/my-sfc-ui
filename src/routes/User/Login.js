@@ -61,8 +61,8 @@ export default class Login extends Component {
     return (
       <div className={styles['login-form']}>
         <div className={styles['login-logo']}>
-          <img alt="" src="https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg" />
-          <span>Ant Design</span>
+          <img alt="" src="/assets/static/pic/head.jpg" />
+          <span>DKNFV</span>
         </div>
         <Form onSubmit={this.handleSubmit}>
           <FormItem>

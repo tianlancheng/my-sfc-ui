@@ -1,8 +1,5 @@
-# react-antd-dva
+# nfv-sfc-ui
 
-基于react + ant-design + dva + Mock 企业级后台管理系统最佳实践
-
-- 预览：http://dva.sosout.com/
 
 ## 特性
 
@@ -10,17 +7,11 @@
 - :rocket: **最新技术栈**：使用 React/dva/antd 等前端前沿技术开发
 - :1234: **Mock 数据**：实用的本地数据调试方案
 
-## 模板
-- [x] roadhog版本升级2.0
-- [x] 项目搭建
-- [x] 登录
-- [x] 基础布局
-- [ ] 分析页
 ## 使用
 
 ```bash
-$ git clone https://github.com/sosout/react-antd-dva.git
-$ cd react-antd-dva
+$ git clone https://github.com/tianlancheng/my-sfc-ui.git
+$ cd my-sfc-ui
 $ npm install
 $ npm start         # 访问 http://localhost:8888
 ```

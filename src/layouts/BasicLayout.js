@@ -167,10 +167,10 @@ class BasicLayout extends React.PureComponent {
   getPageTitle() { // 获取页面标题
     const { location, getRouteData } = this.props;
     const { pathname } = location;
-    let title = 'React Antd Dva';
+    let title = 'DKNFV';
     getRouteData('BasicLayout').forEach((item) => {
       if (item.path === pathname) {
-        title = `${item.name} - React Antd Dva`;
+        title = `${item.name} - docker and nfv`;
       }
     });
     return title;
