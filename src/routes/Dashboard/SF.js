@@ -196,7 +196,15 @@ export default class SF extends PureComponent {
                         <List.Item>
                           <List.Item.Meta
                             avatar={<Avatar src="/assets/static/pic/docker.jpg" />}
-                            title={<div>{pod.ip} (cpu:{pod.cpu} | 内存:{pod.memory}) {pod.status === 'running' ? <Tag color="#87d068">{pod.status}</Tag> : <Icon type="loading" theme="outlined" />}</div>}
+                            title={(
+                              <div>{pod.ip} (cpu:{pod.cpu} | 内存:{pod.memory})
+                                {{
+                                    running: <Tag color="#87d068">{pod.status}</Tag>,
+                                    creating: <span><Tag color="#40a9ff">{pod.status}</Tag><Icon type="loading" /></span>,
+                                    stopping: <span><Tag color="#ffc53d">{pod.status}</Tag><Icon type="loading" /></span>,
+                                }[pod.status]}
+                              </div>
+                            )}
                             description={
                               <div>
                                 收到数据包：{pod.receivedPackets} 队列剩余：{pod.qsize} 当前处理速度：{pod.speed}
