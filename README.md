@@ -1,5 +1,12 @@
 # nfv-sfc-ui
 
+#若报错
+错误1：Can't resolve '@babel/runtime/helpers/esm/extends' in '..node_modules\history\esm'
+将
+import _extends from '@babel/runtime/helpers/esm/extends';
+改为
+import _extends from '@babel/runtime/helpers/es6/extends';
+
 
 ## 特性
 
